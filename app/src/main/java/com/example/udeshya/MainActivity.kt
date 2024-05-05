@@ -2,7 +2,9 @@ package com.example.udeshya
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -16,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
 
     val code=450
+
 
     val permissionarray= arrayOf(
         Manifest.permission.ACCESS_FINE_LOCATION,
@@ -70,7 +73,10 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
     }
+
+
 
     private fun askforpermission() {
         ActivityCompat.requestPermissions(this,permissionarray,code)
@@ -81,6 +87,7 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.container,newinstance)
         transaction.commit()
     }
+
 
 
 }
